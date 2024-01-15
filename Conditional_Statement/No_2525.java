@@ -12,14 +12,16 @@ public class No_2525 {
             int cookingTime = scanner2.nextInt();
 
             minute += cookingTime;
-
-            if(minute>=60) {
-                hour++;
-                if(hour>=24) {
-                    hour = 0;
+            while(minute<60) {
+                if(minute>=60) {
+                    hour++;
+                    if(hour>=24) {
+                        hour = 0;
+                    }
+                    minute -= 60;
                 }
-                minute -= 60;
             }
+
             System.out.printf("%d %d", hour, minute);
         }
     }
